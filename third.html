@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      body {
+        background-image: url("cake.jpg");
+        background-size: 100% 150%;
+        background-repeat: no-repeat;
+        color:#f8ecec;
+      }
+      .row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 6px;
+}
+img {
+  border: 5px solid rgb(0, 0, 0);
+}
+.polaroid a {
+        background: #ffffff;
+        display: inline-block;
+        margin: 10px 20px 30px;
+        padding: 15px 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-box-shadow: 0 4px 63x rgba(0, 0, 0, .3);
+        -moz-box-shadow: 0 4px 3px rgba(0, 0, 0, .3);
+        box-shadow: 0 4px 3px rgba(0, 0, 0, .3);
+        -webkit-transition: all .20s linear;
+        -moz-transition: all .20s linear;
+        transition: all .20s linear;
+        z-index: 0;
+        position: relative;
+      }
+      .polaroid a:after {
+        color: #333;
+        font-size: 25px;
+        content: attr(title);
+        position: relative;
+        top: 15px;
+      }
+      .polaroid img {
+        display: block;
+        width: 250px;
+      }
+      .polaroid a:hover {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+        z-index: 10;
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+        -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+      }
+      img {
+  border-radius: 20px;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #3606062f;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 100%;
+}
+
+.text
+{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+</head>
+  <body>
+    <h1><p><center>FEEL FREE TO HAVE FEAST<br>
+    </center></p><h1></h1>
+<br>
+<br>
+<br>
+
+
+
+   <center>
+      <div class="container">
+        <div class="row">
+          <div class="column">
+        <a href="http://127.0.0.1:3000/new.html">  <img src="51.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Here we offer you differnt flavors of ice creams where you can select your own toppings based on the calories you want to intake so in this way you can feel free to have gelotoes<br>
+           " WE CARE FOR YOU"</div>
+        </div>
+      </div>
+      
+  
+</body>
+</html>

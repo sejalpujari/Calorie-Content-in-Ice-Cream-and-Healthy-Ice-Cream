@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        body {
+        background-color: rgb(237, 180, 118);
+        background-size: 100% 270%;
+        background-repeat: no-repeat;
+        color:#381717;
+      }
+</style>
+  
+
+<body>
+    <form name=form1 method=post action=check.php>
+
+      <center><table class='table table-striped' ></center>
+        <h1 style="text-align:centre;background-color:rgb(250, 242, 243);">FRUIT BLAST</h1>  
+          <img src="fruit.jpg" alt="google advertising" height="250" width="300"  border: /><br> 
+          <h2>TOPPING WITH THEIR CALORIES</h2>
+          
+        <tr ><td ><input type=checkbox name=ckb value=22 onclick='chkcontrol(0)';> kiwi half:22</td></tr></center>
+        <tr><td ><input type=checkbox name=ckb value=230 onclick='chkcontrol(1)';> vanilla flovor 1cup :230 </td></tr>
+        <tr ><td ><input type=checkbox name=ckb value=90 onclick='chkcontrol(2)';>Tutti Frutti 1/2cup cal:90</td></tr>
+        <tr ><td ><input type=checkbox name=ckb value= 16 onclick='chkcontrol(3)';>berries 50gm cal:16 </td></tr>
+        <tr  ><td ><input type=checkbox name=ckb value=32 onclick='chkcontrol(4)';>fruit pulp:32</td></tr>
+        </table></form>
+       <h1> Sum of the calories shouldnt  exceed 400</h1>
+        <br><br>
+        <div id=msg></div><script type="text/javascript"style=background-color:pink > 
+        function chkcontrol(j)
+         {
+        var sum=0;
+        for(var i=0; i < document.form1.ckb.length; i++){
+        
+        if(document.form1.ckb[i].checked){
+        sum = sum + parseInt(document.form1.ckb[i].value);
+        }
+        document.getElementById("msg").innerHTML="Sum :"+ sum;
+        
+        if(sum >400){
+        sum = sum - parseInt(document.form1.ckb[j].value);
+        document.form1.ckb[j].checked = false ;
+        alert("Sum of the selection can't be more than 400") 
+        //return false;
+        }
+        document.getElementById("msg").innerHTML="<h1>Sum of the calories :</h1>"+"<span style ='font-size:62px;'>" + sum + "</span>";
+      }
+        }
+        </script>     
+        <form action="six..html">
+         <button type="submit">SUBMIT</button>
+      </form>
+</body>
+</html> 

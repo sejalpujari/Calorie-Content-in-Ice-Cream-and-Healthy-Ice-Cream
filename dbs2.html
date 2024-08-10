@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+       body {
+        background-color: rgb(237, 180, 118);
+        background-size: 100% 270%;
+        background-repeat: no-repeat;
+        color:#381717;
+      }
+
+.btn {
+  border: none;
+  color: rgb(226, 55, 55);
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.div res{
+  font-size:62px;
+}
+
+success {background-color: #712c9b;} /* Green */
+.success:hover {background-color: #844faf;}
+</style>
+  
+
+<body>
+    <form name=form1 method=post action=check.php>
+
+      <center><table class='table table-striped' ></center>
+        <h1 style="text-align:centre;background-color:rgb(213, 209, 209);">CHOCOLATE SUGAR FREE</h1>  
+          <img src="dbs2.jpg" alt="google advertising" height="250" width="300"  border: /><br> 
+          <h2>SUGARFREE TOPPING WITH THEIR CALORIES</h2>
+          
+        <tr ><td ><input type=checkbox name=ckb value=120 onclick='chkcontrol(0)';> Chocolate 1/2cup:120</td></tr></center>
+        <tr><td ><input type=checkbox name=ckb value=8 onclick='chkcontrol(1)';> chocolate syrup 1tb:8</td></tr>
+         <tr>
+         </li>
+         </td></tr>
+        <tr ><td ><input type=checkbox name=ckb value=25 onclick='chkcontrol(2)';>chocochip 11gm:25</td></tr>
+        <tr ><td ><input type=checkbox name=ckb value= 30  onclick='chkcontrol(3)';>choco sprinkles 5gm:30 </td></tr>
+        </table></form>
+       <h1> Sum of the calories shouldnt  exceed 180</h1>
+        <br><br>
+        <div id=msg></div><script type="text/javascript"style=background-color:pink > 
+        function chkcontrol(j) {
+        var sum=0;
+        for(var i=0; i < document.form1.ckb.length; i++){
+        
+        if(document.form1.ckb[i].checked){
+        sum = sum + parseInt(document.form1.ckb[i].value);
+        }
+        document.getElementById("msg").innerHTML="Sum :"+ sum;
+        
+        if(sum >180){
+        sum = sum - parseInt(document.form1.ckb[j].value);
+        document.form1.ckb[j].checked = false ;
+        alert("The calories intake by a diabatic patient exceeded the limit ") 
+        //return false;
+        }
+        document.getElementById("msg").innerHTML="<h1>Sum of the calories :</h1>"+"<span style ='font-size:62px;'>" + sum + "</span>";
+        
+        }
+        }
+       </script>
+       <form action="six..html">
+        <button type="submit">SUBMIT</button>
+     </form>
+        
+        
+    
+</body>
+</html> 

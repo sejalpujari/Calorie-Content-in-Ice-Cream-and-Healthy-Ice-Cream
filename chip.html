@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <style>
+    .msg{
+      text-size-adjust: 20px;
+    }
+   
+       body {
+        background-color: rgb(237, 180, 118);
+        background-size: 100% 270%;
+        background-repeat: no-repeat;
+        color:#381717;
+      }
+
+  </style>
+
+<body>
+    <form name=form1 method=post action=check.php>
+
+      <center><table class='table table-striped' ></center>
+        <h1 style="text-align:centre;background-color:rgb(251, 248, 248);">CHOCOLATE CHIP</h1>  
+          <img src="chifp.jpg" alt="google advertising" height="250" width="300"  border: /><br> 
+          <h2>TOPPING WITH THEIR CALORIES</h2>
+          
+        <tr ><td ><input type=checkbox name=ckb value=161 onclick='chkcontrol(0)';>caramel 1cup:161</td></tr></center>
+        <tr><td ><input type=checkbox name=ckb value=290 onclick='chkcontrol(1)';>chcochip vanila 1cup cal:290 </td></tr>
+        <tr ><td ><input type=checkbox name=ckb value=24 onclick='chkcontrol(2)';>10chocochips 1cup cal:24</td></tr>
+        <tr ><td ><input type=checkbox name=ckb value= 70 onclick='chkcontrol(3)';>wafer 10gm:70 </td></tr>
+        <tr  ><td ><input type=checkbox name=ckb value=40 onclick='chkcontrol(4)';>chocolate syrup calories cal:40</td></tr>
+        </table></form>
+      
+        <br><br>
+        <div id=msg></div><script type="text/javascript"style=background-color:pink > 
+        function chkcontrol(j) {
+        var sum=0;
+        for(var i=0; i < document.form1.ckb.length; i++){
+        
+        if(document.form1.ckb[i].checked){
+        sum = sum + parseInt(document.form1.ckb[i].value);
+        }
+        document.getElementById("msg").innerHTML="Sum :"+ sum;
+        
+        if(sum >400){
+        sum = sum - parseInt(document.form1.ckb[j].value);
+        document.form1.ckb[j].checked = false ;
+        alert("Sum of the selection can't be more than 400") 
+        //return false;
+        }
+        document.getElementById("msg").innerHTML="<h1>Sum of the calories :</h1>"+"<span style ='font-size:62px;'>" + sum + "</span>";
+        }
+        }
+        </script>
+      <form action="six..html">
+        <button type="submit">SUBMIT</button>
+     </form>
+
+        
+    
+</body>
+</html> 
